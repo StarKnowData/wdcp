@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>用户管理</title>
+<link href="/templates/Style/css_body.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="/templates/JSFile/fun_normal.js"></script>
+<script language="javascript" src="/templates/JSFile/jquery.min.js"></script>
+<script type="text/javascript" src="/js/fun.js"></script>
+</head>
+<body>
+<a name="top" id="top"></a><table width="96%" border="0" cellspacing="0" cellpadding="0" align="center"  >
+<tr >
+    <td  >
+<div class="bodytitle">
+	<div class="bodytitleleft"></div>
+	<div class="bodytitletxt">用户管理</div>
+</div>
+</div>
+</td></tr></table>
+<br>
+<table width="96%" border="0" cellspacing="1" cellpadding="1" align="center" class="tbtitle" style="background:#FEDF63;">
+  <tr  bgcolor="#FFFFE6">
+    <td><strong>用户管理</strong> <a href="<?=$PHP_SELF;?>?act=list">用户列表</a> <a href="<?=$PHP_SELF;?>?act=add">增加用户</a> <a href="<?=$PHP_SELF;?>?act=search">搜索用户</a></td>
+  </tr>
+</table>
+<br />
+<form id="form3" name="form3" method="post" action="">
+ <table width="96%" border="0" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+    <tr bgcolor="#F2F4F6">
+      <td colspan="2"><strong>修改用户客服</strong></td>
+    </tr>
+    <tr align="center" bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+      <td width="113">用户名</td>
+      <td align="left" class="a_fen">&nbsp;<?=$r['name'];?></td>
+    </tr>
+    <tr align="center" bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+      <td>分配客服</td>
+      <td align="left" class="a_fen"><label>
+      <select name="srvu">
+        <?=$ku_list;?>
+      </select>
+      </label></td>
+    </tr>
+    <tr align="center" bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+      <td>&nbsp;</td>
+      <td align="left" class="a_fen"><label>
+        <input name="Submit_srvu" class="button" type="submit" id="Submit_srvu" value="确定" />
+        <input type="hidden" name="id" value="<?=$r['id'];?>" />
+      </label></td>
+    </tr>
+  </table>
+</form>

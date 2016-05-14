@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>rewrite管理</title>
+</head>
+<body>
+<link href="/templates/Style/css_body.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="/templates/JSFile/fun_normal.js"></script>
+<script language="javascript" src="/templates/JSFile/jquery.min.js"></script>
+<script type="text/javascript" src="/js/fun.js"></script>
+<a name="top" id="top"></a><table width="96%" border="0" cellspacing="0" cellpadding="0" align="center"  >
+<tr >
+    <td  >
+<div class="bodytitle">
+	<div class="bodytitleleft"></div>
+	<div class="bodytitletxt">伪静态规则文件管理</div>
+</div>
+</td></tr></table>
+<br />
+
+<table width="96%" border="0" cellspacing="1" cellpadding="1" align="center" class="tbtitle" >
+  <tr  bgcolor="#F2F4F6">
+    <td >
+	  <a href="<?=$PHP_SELF;?>?">查看</a> | <a href="<?=$PHP_SELF;?>?act=add">增加</a>
+  </tr>
+</table>
+<br>
+<table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="2" bgcolor="#F2F4F6"><strong>伪静态规则文件管理</strong></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFE9" >
+    <td  align="left" >文件名</td>
+    <td align="left"   >操作</td>
+  </tr>
+  <?
+for ($i=0;$i<sizeof($list);$i++) {
+	?>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="left" class="a_fen"><?=$list[$i]['file'];?></td>
+    <td align="left"   class="a_fen"><a href="<?=$PHP_SELF;?>?act=edit&f=<?=$list[$i]['file'];?>">修改</a> <a href=# onClick="javascript:act_confirm('确实要删除？','<?=$PHP_SELF;?>?act=del&f=<?=$list[$i]['file'];?>');">删除</a></td>
+  </tr>
+  <?
+}
+?>
+</table>
+<br>
+<table width="96%" border="0" cellspacing="1" cellpadding="1" align="center" class="tbtitle" style="background:#FEDF63;">
+  <tr  bgcolor="#FFFFE6">
+    <td>伪静态规则可以在此处添加，也可以使用.htaccess文件格式，上传到网站根目录下，也就是public_html/目录下</td>
+  </tr>
+</table>
+<br>

@@ -1,0 +1,543 @@
+﻿*{
+
+	font-size:12px;
+
+}
+
+html{
+
+	padding-top:5px;
+
+	padding-bottom:5px;
+
+	padding-right:5px;
+
+	
+
+}
+
+
+
+form{ padding:0px; margin:0px }
+
+body{
+
+	font-family:Tahoma,Arial, Helvetica, sans-serif;
+
+	font-size:12px;
+
+	overflow-y:scroll;
+
+	height:100%;
+
+	margin:0px;
+
+}
+
+input{ 
+
+}
+
+.button{font-size:12px;border: 1px #FF9900 solid;color: #000000;FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#FF9900, EndColorStr=#FFCC00); background-color: #FFCC00;CURSOR: hand;height:22px; padding-left:10px; padding-right:10px;}
+
+
+
+.pagebutton{font-size:9pt; color: #003399;border: 1px #003399 solid;color:006699;BORDER-BOTTOM: #93bee2 1px solid;BORDER-LEFT: #93bee2 1px solid;BORDER-RIGHT: #93bee2 1px solid;BORDER-TOP: #93bee2 1px solid;FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); background-color: #e8f4ff;CURSOR: hand;font-style: normal ;height:22px; }
+
+.cur{ cursor:s-resize;}
+
+.cur2{ cursor:s-resize;}
+
+
+
+.submit{ margin:0px;
+
+height:20px;
+
+}
+
+
+
+input[type=image]{ border:none }
+
+input[type=checkbox]{ border:none }
+
+input[type=radio]{ border:none }
+
+.ncbox{}
+
+
+
+.np{ border:0px; } 
+
+
+
+img{
+
+	border:0px;
+
+}
+
+a{
+
+	color:#004499;
+
+}
+
+a:hover{
+
+	text-decoration:none;
+
+}
+
+
+
+.fontpadding { margin-left:30px}
+
+
+
+.bodytitle{
+
+	width:100%;
+
+	height:33px;
+
+	background:url(../images/body_title_bg.gif) top left repeat-x;
+
+	margin-left:auto;
+
+	margin-right:auto;
+
+	margin-top:8px;
+
+	clear:both;
+
+}
+
+.bodytitleleft{
+
+	width:30px;
+
+	height:33px;
+
+	float:left;
+
+	background:url(../images/body_title_left.gif) right bottom no-repeat;
+
+}
+
+.bodytitletxt{
+
+	height:27px;
+
+	float:left;
+
+	margin-top:6px;
+
+	line-height:27px;
+
+	font-size:14px;
+
+	font-weight:bold;
+
+	letter-spacing:2px;
+
+	padding-left:8px;
+
+	padding-right:8px;
+
+	background:#FFF url(../images/body_title_right.gif) right bottom no-repeat;
+
+}
+
+.tbtitle{
+
+	line-height:20px;
+
+	letter-spacing:1px;
+
+	background:#E3E6EB;
+
+}
+
+.webtitle{
+
+	line-height:27px;
+
+	letter-spacing:1px;
+
+	border:1px solid #E2F5BC;
+
+}
+
+.webtitle tr td {height:32px}
+
+.tbtitle tr td { padding:5px;}
+
+.tbtitle .tbtitletxt{
+
+	text-indent:20px;
+
+}
+
+.tblist{
+
+	background:#E2F5BC;
+
+	margin-left:auto;
+
+	margin-right:auto;
+
+}
+
+.tblist2{
+
+	margin-left:auto;
+
+	margin-right:auto;
+
+	border-left:1px solid #E2F5BC;
+
+	border-right:1px solid #E2F5BC;
+
+	border-bottom:1px solid #E2F5BC;
+
+}
+
+
+
+.tblist td{
+
+	background:#FFFFFF;
+
+	padding:6px;
+
+}
+
+.tblist td.tbsname{
+
+	background:#F9FFE6;
+
+	padding:6px;
+
+}
+
+.inputbut{
+
+	padding-left:3px;
+
+	padding-right:2px;
+
+	border:1px solid #999;
+
+	background:#FFF url(../images/inputbut_bg.gif) left center repeat-x;
+
+	font-size:12px;
+
+	height:24px;
+
+	padding-top:2px;
+
+	letter-spacing:2px;
+
+	vertical-align:middle;
+
+	margin-bottom:6px;
+
+}
+
+.inputbutx{
+
+	padding-left:3px;
+
+	padding-right:2px;
+
+	border:1px solid #999;
+
+	background:#FFF url(../images/inputbut_bg.gif) left center repeat-x;
+
+	font-size:12px;
+
+	height:20px;
+
+	letter-spacing:2px;
+
+	vertical-align:middle;
+
+	text-decoration: none;
+
+	line-height: 20px;
+
+	padding-top: 2px;
+
+}
+
+.trlbg td{
+
+	background:#FFFFCC;
+
+}
+
+.hg {
+
+line-height: 20px;
+
+}
+
+
+
+.dlg {
+
+	border: 2px solid #749F4D;
+
+	background-color: #F0FAEB;
+
+	padding: 2px;
+
+	width: 200px;
+
+	line-height:160%;
+
+}
+
+
+
+.dlgTesttitle {
+
+	border: 2px solid #749F4D;
+
+	background-color: #F0FAEB;
+
+	padding: 2px;
+
+	width: 200px;
+
+	line-height:150%;
+
+}
+
+
+
+.dlg2 {
+
+	border: 2px solid #749F4D;
+
+	background-color: #F0FAEB;
+
+	padding: 2px;
+
+	width: 380px;
+
+	line-height:160%;
+
+}
+
+
+
+.data {
+
+	border-right-width: 1px;
+
+	border-bottom-width: 1px;
+
+	border-left-width: 1px;
+
+	border-right-style: solid;
+
+	border-bottom-style: solid;
+
+	border-left-style: solid;
+
+	border-right-color: #E2F5BC;
+
+	border-bottom-color: #E2F5BC;
+
+	border-left-color: #E2F5BC;
+
+}
+
+
+
+.dedePagelist a
+
+{
+
+   border:1px;
+
+   border:1px solid #CCC;
+
+   margin-right:3px;
+
+   text-decoration:none;
+
+   color:#4E5344;
+
+   padding:1px 2px 1px 2px;
+
+   letter-spacing:0px
+
+}
+
+
+
+.bline {
+
+  border-bottom: 1px dotted #BCD0B5;
+
+  background-color: #FFFFFF;
+
+}
+
+.main_dnews{
+
+	padding:10px 0px 5px 100px;
+
+	background:url(../images/mico_1.gif) 10px 20px no-repeat;
+
+	line-height:31px;
+
+}
+
+.main_dnews a{
+
+	color:#FF3300;
+
+}
+
+
+
+.main_qbut div{
+
+	width:100px;
+
+	background:url(../images/mico_l.gif) no-repeat;
+
+	margin:0px auto;
+
+}
+
+.main_qbut div a{
+
+	display:block;
+
+	width:100px;
+
+	height:24px;
+
+	padding-top:84px;
+
+}
+
+.main_qbut div a:hover{
+
+	background:url(../images/mb_bg.gif) no-repeat;
+
+}
+
+
+
+.main_bleft{
+
+	line-height:29px;
+
+	padding-right:10px;
+
+	font-weight:bold;
+
+	letter-spacing:2px;
+
+	color:#006633;
+
+}
+
+.main_bright{
+
+	line-height:29px;
+
+	padding-left:12px;
+
+}
+
+
+
+.coolbg4 {
+
+  height:20px;
+
+  width:200px;
+
+  border-bottom: 1px solid #C9CFC1;
+
+  background-color: #EDEBE5;
+
+  text-align:right;
+
+  margin-bottom:3px;
+
+}
+
+
+
+#_mysource{
+
+  line-height:150%;
+
+  padding-left:5px;
+
+  padding-right:2px;
+
+}
+
+
+
+.option1{ background-color: #DCECA6; }
+
+.option2{ background-color: #F7FBD2; }
+
+.option3{ background-color: #FFFFFF; }
+
+
+
+#head1{
+
+border-bottom:1px solid #c2df9d;
+
+}
+
+
+
+#head2{
+
+border-bottom:1px solid #c2df9d;
+
+}
+
+
+
+.warnSpan { font-weight:bold; font-size:16px; color:#FF0000; }
+
+.ct_td{
+
+  padding:3px;
+
+  padding-left:6px;
+
+}
+
+.clb{ position:relative;width:100%;overflow:auto;height:100%;line-height:21px;font-size:13px;}
+
+.weight{ font-weight:bold}
+
+.hide{ display:none}
+
+.red { color:#FF0000 }
+
+.readonly{ color:#333333; width:290px}
+
+.point{ cursor:pointer; }
+
+.impc{color:#FF0000; font-weight:bold }
+
+.fontpadding2{ padding-left:40px}
+
+.qianbibutton{font-size:12px;border: 1px #FF9900 solid;color: #000000;FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#FF9900, EndColorStr=#FFCC00); background-color: #FFCC00;CURSOR: hand;height:22px; margin-left:2px; }

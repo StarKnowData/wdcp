@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>iptables设置</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+.STYLE3 {color: #FF0000; font-weight: bold; }
+-->
+</style>
+</head>
+<body>
+<link href="/templates/Style/css_body.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="/templates/JSFile/fun_normal.js"></script>
+<script language="javascript" src="/templates/JSFile/jquery.min.js"></script>
+<script type="text/javascript" src="/js/fun.js"></script>
+<a name="top" id="top"></a><table width="96%" border="0" cellspacing="0" cellpadding="0" align="center"  >
+<tr >
+    <td  >
+<div class="bodytitle">
+	<div class="bodytitleleft"></div>
+	<div class="bodytitletxt">防火墙iptables访问规则配置</div>
+</div>
+</td></tr></table>
+<br />
+
+<table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="8" bgcolor="#F2F4F6"><strong>规则列表</strong>&nbsp;<a href="<?=$PHP_SELF;?>?act=add">增加规则</a>&nbsp;<a href="<?=$PHP_SELF;?>?act=save"><font color="#FF0000">保存</font></a></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFE9" >
+    <td  align="left" >ID</td>
+    <td  align="left" >协议</td>
+    <td  align="left" >源IP</td>
+    <td  align="left" >源端口</td>
+    <td  align="left" >目标IP</td>
+    <td  align="left" >目标端口</td>
+    <td  align="left" >动作</td>
+    <td align="left"   >操作</td>
+  </tr>
+  <? for ($i=0;$i<sizeof($list);$i++) { ?>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="left" class="a_fen"><?=$list[$i]['id'];?></td>
+    <td   align="left" class="a_fen"><?=$list[$i]['pro'];?></td>
+    <td   align="left" class="a_fen"><?=$list[$i]['sip'];?></td>
+    <td   align="left" class="a_fen"><?=$list[$i]['sport'];?></td>
+    <td   align="left" class="a_fen"><?=$list[$i]['dip'];?></td>
+    <td   align="left" class="a_fen"><?=$list[$i]['dport'];?></td>
+    <td   align="left" class="a_fen"><?=$list[$i]['accept'];?></td>
+    <td align="left"   class="a_fen"><a href="<?=$list[$i]['href'];?>">删除</a></td>
+  </tr> <? } ?>
+</table>
+<br><table width="96%" border="0" cellspacing="1" cellpadding="1" align="center" class="tbtitle" style="background:#FEDF63;">
+  <tr  bgcolor="#FFFFE6">
+    <td><span class="STYLE1">备注</span>：<br>
+      1 所有增加，删除等操作，重起后会失效<br>
+      2 如需<span class="STYLE1">重起后生效</span>，操作完后，点击&quot;<span class="STYLE3">保存</span>&quot; </td>
+  </tr></table>
+<br>

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+<meta name="robots" content="none">
+
+<title>wdcp服务器/虚拟主机管理系统</title>
+
+<meta http-equiv="Pragma" content="no-cache">
+
+<style type="text/css">
+
+body,html{font-size:12px; font-family: "宋体",Arial, Helvetica, sans-serif;}
+
+body{margin:0px; background:url(/templates/images/bg.jpg) repeat-x top #F2F3F7;}
+
+.main_mid{height:auto; padding-top:74px; top:0px; bottom:46px; left:0px; right:0px;}
+
+.maim_content{position:absolute; left:0px; right:0px; top:35%;}
+
+.bom{repeat-x; height:46px; width:100%; position:absolute; bottom:0px; left:0px; right:0px; z-index:100;}
+
+.contenturl{list-style:none; margin:0px; padding:0px;}
+
+.contenturl li{list-style:none; line-height:25px; padding-left:8px; left 8px no-repeat; color:#7A787B;}
+
+.wenben{ color:#7A787B }
+
+.input01{width:150px; height:22px; border:1px #C6BAC8 solid; line-height:22px;}
+
+.input02{width:96px; height:30px; border:none; background:url(/templates/images/login_submit.gif) no-repeat; cursor:pointer;}
+
+</style>
+</head>
+<body>
+<div style="height:74px; background:url(/templates/images/bg.jpg) repeat-x;"><div style="height:74px; width:100%; clear:both; overflow:hidden; background:url(/templates/images/topbg.jpg) no-repeat center;"></div></div>
+
+<div class="main_mid">
+
+ <div class="maim_content">
+
+  <div style="width:665px; margin:auto; height:200px;">
+
+    <div style="width:290px; background:url(/templates/images/boxsplit.jpg) right no-repeat; padding-right:10px; float:left;">
+
+       <div style="overflow:hidden;"><img src="/templates/images/logo.jpg" /></div>
+
+       <div style="overflow:hidden;">
+
+         <ul class="contenturl">
+
+           <li>请不要在公共场所设定计算机记住您的个人信息。</li>
+
+           <li>在公共场所使用本产品后请务必退出系统，以避免造成不必要的损失。</li>
+
+           <li>尽量避免多人使用同一账号。<a href="http://www.wdlinux.cn/bbs/index.php" target="_blank"><font color="#000000">官网交流论坛</font></a> <?=$reg_url;?></li>
+
+         </ul>
+
+       </div>
+
+    </div>
+
+    <div style="width:325px;  padding-left:40px; float:left;">
+
+       <div style="overflow:hidden; height:25px; line-height:25px; padding-top:30px; font-size:15px;"><strong>欢迎使用wdcp服务器/虚拟主机管理系统</strong></div>
+
+       <div style="overflow:hidden;">
+
+		<form id="form1" name="form1" method="post" action="">
+
+         <table border="0" cellpadding="0" cellspacing="0">
+
+           <tr>
+
+             <td width="69" height="30" class="wenben"> <div align="right">用户名：</div></td>
+
+             <td width="166"><input name="username" class="input01" type="text" id="username" size="15" /></td>
+           </tr>
+
+           <tr>
+
+             <td height="30" class="wenben"><div align="right">密　码：</div></td>
+
+             <td><input name="passwd" class="input01" type="password" id="passwd" size="15" /></td>
+           </tr>
+		   <? if ($is_lc==1) { ?>
+
+           <tr>
+
+             <td height="30" class="wenben"><div align="right">验证码：</div></td>
+
+             <td>
+
+			  <input name="ckcode" id="ckcode" value="" size="6" maxlength="6" style="width:80px; height:22px; border:1px #C6BAC8 solid; line-height:18px;"/> 
+
+			  <img src="/inc/imgck.php" alt="点击可更新" name="vkcode" height="20" border="0" align="absmiddle" id="vkcode" onclick="this.src='/inc/imgck.php?u=' + Math.random()" />
+
+              <input name="is_ck" type="hidden" value="1" />			 </td>
+           </tr> <? } ?>
+
+           <tr>
+
+             <td height="50" colspan="2"><div align="center">
+               <input name="Submit_login" id="Submit_login" type="submit" value="" class="input02" />
+             </div></td>
+           </tr>
+         </table>
+
+         </form>
+
+       </div>
+
+    </div>
+
+
+
+  </div>
+
+ </div>
+
+</div>
+
+<div class="bom"></div>
+
+
+
+</body>
+
+</html>
+

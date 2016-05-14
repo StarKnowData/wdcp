@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>修改mysql root密码</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+-->
+</style>
+</head>
+<body>
+<link href="/templates/Style/css_body.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="/templates/JSFile/fun_normal.js"></script>
+<script language="javascript" src="/templates/JSFile/jquery.min.js"></script>
+<script type="text/javascript" src="/js/fun.js"></script>
+<a name="top" id="top"></a><table width="96%" border="0" cellspacing="0" cellpadding="0" align="center"  >
+<tr >
+    <td  >
+<div class="bodytitle">
+	<div class="bodytitleleft"></div>
+	<div class="bodytitletxt">修改mysql数据库root管理员密码</div>
+</div>
+</td></tr></table>
+<br />
+
+<table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="2" bgcolor="#F2F4F6"><strong>修改mysql数据库root管理员密码</strong></td>
+  </tr>
+  <form id="form_chg_mysql_passwd" name="form_chg_mysql_passwd" method="post" action="">
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td width="9%"   align="center" class="a_fen">原密码</td>
+    <td width="91%" align="left"   class="a_fen"><input name="opass" type="password" id="opass" style="width:180px" /></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">新密码</td>
+    <td align="left"   class="a_fen"><input name="npass" type="password" id="npass" style="width:180px"/>
+      6至15个字母,数字,下划线组成</td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">确认密码</td>
+    <td align="left"   class="a_fen"><input name="cpass" type="password" id="cpass" style="width:180px" />
+      6至15个字母,数字,下划线组成</td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="left" class="a_fen"> </td>
+    <td align="left"   class="a_fen"><input name="Submit_chg_mysql" type="submit" class="button" id="Submit_chg_mysql" value="确定" /></td>
+  </tr>
+  </form>
+</table>
+<br>
+<table width="96%" border="0" cellspacing="1" cellpadding="1" align="center" class="tbtitle" style="background:#FEDF63;">
+  <tr  bgcolor="#FFFFE6">
+    <td><span class="STYLE1">备注</span>:<br>
+      1 这里的root用户,是指mysql里的root用户,也就是mysql的管理用户,与系统里的root用户是不同的,请注意区分 <br>
+    2 修改mysql的管理员管理root的密码 </td>
+  </tr>
+</table>

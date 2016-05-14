@@ -1,0 +1,108 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>系统资源查看</title>
+</head>
+<script language="javascript" src="/templates/JSFile/fun_normal.js"></script>
+<script type="text/javascript" src="/js/fun.js"></script>
+<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
+<script type="text/javascript"> 
+<!--
+$(document).ready(function(){getJSONData();});
+function getJSONData()
+{
+	setTimeout("getJSONData()", 1000);
+	$.getJSON('?acd=rt&callback=?', displayData);
+}
+function displayData(dataJSON)
+{
+	$("#run_time").html(dataJSON.run_time);
+	$("#load1").html(dataJSON.load1);
+	$("#load2").html(dataJSON.load2);
+	$("#load3").html(dataJSON.load3);
+	$("#mem1").html(dataJSON.mem1);
+	$("#mem2").html(dataJSON.mem2);
+	$("#mem3").html(dataJSON.mem3);
+	$("#real_mem").html(dataJSON.real_mem);
+	$("#use_mem").html(dataJSON.use_mem);
+	$("#free_mem").html(dataJSON.free_mem);
+	$("#sum_swap").html(dataJSON.sum_swap);
+	$("#use_swap").html(dataJSON.use_swap);
+	$("#free_swap").html(dataJSON.free_swap);
+}
+-->
+</script>
+
+<body>
+<link href="/templates/Style/css_body.css" rel="stylesheet" type="text/css" />
+
+<a name="top" id="top"></a><table width="96%" border="0" cellspacing="0" cellpadding="0" align="center"  >
+<tr >
+    <td  >
+<div class="bodytitle">
+	<div class="bodytitleleft"></div>
+	<div class="bodytitletxt">资源使用率</div>
+</div>
+</td></tr></table>
+<br />
+
+<table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="4" bgcolor="#F2F4F6"><strong>资源使用率</strong></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td width="20%"   align="left" class="a_fen"><div align="center">服务器运行时间</div></td>
+    <td width="15%"   align="left" class="a_fen"><span id="run_time">0</span></td>
+    <td width="15%"   align="left" class="a_fen"></td>
+    <td width="50%" align="left"   class="a_fen"></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="left" class="a_fen"><div align="center">系统负载</div></td>
+    <td   align="left" class="a_fen">1分钟</td>
+    <td   align="left" class="a_fen">5分钟</td>
+    <td align="left"   class="a_fen">15分钟</td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="left" class="a_fen"><div align="center"></div></td>
+    <td   align="left" class="a_fen"><span id="load1">0</span></td>
+    <td   align="left" class="a_fen"><span id="load2">0</span></td>
+    <td align="left"   class="a_fen"><span id="load3">0</span></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td colspan="4"   align="left" class="a_fen">&nbsp;</td>
+  </tr>  
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="left" class="a_fen"><div align="center">内存使用率(单位M):</div></td>
+    <td   align="left" class="a_fen">总内存</td>
+    <td   align="left" class="a_fen">已使用</td>
+    <td align="left"   class="a_fen">空闲内存</td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="left" class="a_fen"><div align="center">物理内存</div></td>
+    <td   align="left" class="a_fen"><span id="mem1">0</span>M</td>
+    <td   align="left" class="a_fen"><span id="mem2">0</span>M</td>
+    <td align="left"   class="a_fen"><span id="mem3">0</span>M</td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="left" class="a_fen"><div align="center">实际使用内存</div></td>
+    <td   align="left" class="a_fen"><span id="real_mem">0</span>M</td>
+    <td   align="left" class="a_fen"><span id="use_mem">0</span>M</td>
+    <td align="left"   class="a_fen"><span id="free_mem">0</span>M</td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="left" class="a_fen"><div align="center">虚拟内存</div></td>
+    <td   align="left" class="a_fen"><span id="sum_swap">0</span>M</td>
+    <td   align="left" class="a_fen"><span id="use_swap">0</span>M</td>
+    <td align="left"   class="a_fen"><span id="free_swap">0</span>M</td>
+  </tr>
+</table>
+<br>
+<table width="96%" border="0" cellspacing="1" cellpadding="1" align="center" class="tbtitle" style="background:#FEDF63;">
+  <tr  bgcolor="#FFFFE6">
+    <td>备注：<br>
+      1 服务器运行时间表示开机后到当前的一个时间<br>
+      2 系统负载表示当前系统整体的一个负荷情况，1以下是表示系统没有什么负荷，大于10，表示系统的负荷有点大了<br>
+      3 内存使用情况，以实际使用内存为准，因Linux的内存分配机制不同，有一部分是做缓存的，这部分实际上是属空闲的<br>
+      4 虚拟内存一般不会用到,但若大量使用时,系统性能会立马下降,影响较大</td>
+  </tr>
+</table>

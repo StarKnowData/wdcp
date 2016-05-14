@@ -1,0 +1,320 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>系统设置</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+-->
+</style>
+</head>
+
+<body>
+<link href="/templates/Style/css_body.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="/templates/JSFile/fun_normal.js"></script>
+<script language="javascript" src="/templates/JSFile/jquery.min.js"></script>
+<script type="text/javascript" src="/js/fun.js"></script>
+<a name="top" id="top"></a><table width="96%" border="0" cellspacing="0" cellpadding="0" align="center"  >
+<tr >
+    <td  >
+<div class="bodytitle">
+	<div class="bodytitleleft"></div>
+	<div class="bodytitletxt">系统设置</div>
+</div>
+</td></tr></table>
+<br>
+<table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+<form id="form1" name="form1" method="post" action="">
+  <tr>
+    <td colspan="2" bgcolor="#F2F4F6"><strong>系统设置</strong></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td width="11%"   align="center" class="a_fen">模板目录</td>
+    <td width="89%" align="left" class="a_fen"><label>
+        <input name="templates_dir" type="text" id="templates_dir" value="<?=$templates_dir;?>" />
+      </label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">cookie有效期</td>
+    <td align="left" class="a_fen"><label>
+        <input name="cookie_time" type="text" id="cookie_time" value="<?=$cookie_time;?>" />
+        单位为秒
+      </label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">验证码</td>
+    <td align="left" class="a_fen"><label>
+    <input name="is_lc" type="checkbox" id="is_lc" value="1" <? if ($is_lc==1) echo 'checked';?>>
+    启用后，登录时需验证码登录</label></td>
+  </tr>  
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">登录锁定</td>
+    <td align="left" class="a_fen"><label>
+    <input name="is_ll" type="checkbox" id="is_ll" value="1" <? if ($is_ll==1) echo 'checked';?>>
+    密码错误三次将锁定半小时,即半小时内同一个IP不能登录
+    </label></td>
+  </tr>  
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">开放注册</td>
+    <td align="left" class="a_fen"><label>
+    <input name="is_reg" type="checkbox" id="is_reg" value="1" <? if ($is_reg==1) echo 'checked';?>>
+    开放后可注册普通用户
+    </label></td>
+  </tr> 
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">web服务引擎</td>
+    <td align="left" class="a_fen"><label>
+	  <? 
+	  if ($web_eng==1) echo 'apache';
+	  elseif ($web_eng==2) echo 'nginx';
+      elseif ($web_eng==3) echo 'nginx+apache';
+	  else echo '未检测到';
+	  ?>
+      </label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">web服务端口</td>
+    <td align="left" class="a_fen"><label>
+        <input name="web_port" type="text" id="web_port" value="<?=$web_port;?>" />
+        如有多个，请用逗号分隔，如&quot;80,81&quot;,80是默认的，不能删除也不能替换，其它的直接在后台加上即可，增加端口后，要在防火墙(<a href="/safe/iptables.php">iptables</a>）里开通相应的端口，否则会有问题 </label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">web服务器IP</td>
+    <td align="left" class="a_fen"><label>
+        <input name="web_ip" type="text" id="web_ip" value="<?=$web_ip;?>" size="50" />
+    此功能只在多IP且要域名指定IP时用,否则请留空,默认IP不填;有多个时请用逗号&quot;,&quot;分隔 </label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">web根目录</td>
+    <td align="left" class="a_fen"><label>
+        <input name="web_home" type="text" id="web_home" value="<?=$web_home;?>" />
+    </label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">备份目录</td>
+    <td align="left" class="a_fen"><label>
+        <input name="backup_home" type="text" id="backup_home" value="<?=$backup_home;?>" />
+    </label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">回收站目录</td>
+    <td align="left" class="a_fen"><label>
+        <input name="trash_home" type="text" id="trash_home" value="<?=$trash_home;?>" />
+    </label></td>
+  </tr>   
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">删除站点目录</td>
+    <td align="left" class="a_fen"><label>
+    <input name="site_dir_del_is" type="checkbox" id="site_dir_del_is" value="1" <? if ($site_dir_del_is==1) echo 'checked';?> />
+    删除站点时是否删除站点的目录和数据,默认不删除,<font class="red">勾选此项后，删除站点时切记备份数据</font></label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">删除FTP目录</td>
+    <td align="left" class="a_fen"><label>
+    <input name="ftp_dir_del_is" type="checkbox" id="ftp_dir_del_is" value="1" <? if ($ftp_dir_del_is==1) echo 'checked';?> />
+      删除FTP用户时是否删除FTP用户的目录及数据，默认不删除,<font class="red">勾选此项后，删除站点时切记备份数据</font></label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">phpmyadmin目录</td>
+    <td align="left" class="a_fen"><label>
+        <input name="phpmyadmin_dir" type="text" id="phpmyadmin_dir" value="<?=$phpmyadmin_dir;?>" />
+      </label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">mysql超额关闭</td>
+    <td align="left" class="a_fen"><label>
+    <input name="mysql_quota_is" type="checkbox" id="mysql_quota_is" value="1" <? if ($mysql_quota_is==1) echo 'checked';?>>
+    此选项是在设置了mysql数据库大小并超额后会自动停止写入，便停用了mysql数据库</label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">应用模块</td>
+    <td align="left" class="a_fen"><label>
+        <input name="module_list" type="text" id="module_list" value="<?=$module_list;?>" size="35" />
+      多个模块用逗号&quot;,&quot;分隔，系统默认模块为vhost,mysql,ftp</label></td>
+  </tr>
+    <tr align="center" bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+      <td align="center" class="a_fen">后台访问IP：</td>
+      <td align="left" class="a_fen"><label>
+        <input name="manager_ip" type="text" id="manager_ip" value="<?=$manager_ip;?>" size="60" />
+        支持多个，多个间用逗号&quot;,&quot;隔开，支持IP段，IP段格式如192.168.X.X，不用请留空</label></td>
+    </tr>
+    <tr align="center" bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+      <td align="center" class="a_fen">后台访问域名：</td>
+      <td align="left" class="a_fen"><label>
+        <input name="manager_url" type="text" id="manager_url" value="<?=$manager_url;?>" size="60" />
+        支持多个，多个间用逗号&quot;,&quot;隔开，不用请留空</label></td>
+    </tr>
+    <tr align="center" bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+      <td align="center" class="a_fen">API访问IP：</td>
+      <td align="left" class="a_fen"><label>
+        <input name="api_ip" type="text" id="api_ip" value="<?=$api_ip;?>" size="50" />
+        如有多个IP，可用逗号分隔,如不限制IP，用null，不用请留空</label></td>
+    </tr>
+    <tr align="center" bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+      <td align="center" class="a_fen">API登录Key：</td>
+      <td align="left" class="a_fen"><label>
+        <input name="api_pass" type="text" id="api_pass" value="<?=$api_pass;?>" size="20" />
+        通过API登录Key,只支持字母，数据，下划线等，不用请留空</label></td>
+    </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen"></td>
+    <td align="left" class="a_fen"><label>
+        <input name="Submit" class="button" type="submit" id="Submit" value="确定" />
+      </label></td>
+  </tr>
+  </form>
+</table>
+<br>
+<table width="96%" border="0" cellspacing="1" cellpadding="1" align="center" class="tbtitle" style="background:#FEDF63;">
+  <tr  bgcolor="#FFFFE6">
+    <td>cookie有效期是指登录后台的最长有效期，超过此时间会重新登录</td>
+  </tr>
+</table>
+<br><table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="2" bgcolor="#F2F4F6"><hr></td>
+  </tr></table>
+<form id="form5" name="form5" method="post" action="">
+<table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="2" bgcolor="#F2F4F6"><strong>web引擎切换</strong></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td width="11%"   align="center" class="a_fen">当前使用引擎</td>
+    <td width="89%" align="left" class="a_fen"><label><select name="web_eng" id="web_eng">
+        <?=web_eng_t();?>
+      </select>
+    </label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen"></td>
+    <td align="left" class="a_fen"><label>
+        <input name="Submit5" class="button" type="submit" id="Submit5" value="确定" />
+      </label></td>
+  </tr>
+</table>
+</form>  
+<table width="96%" border="0" cellspacing="1" cellpadding="1" align="center" class="tbtitle" style="background:#FEDF63;">
+  <tr  bgcolor="#FFFFE6">
+    <td>1 apache&nbsp;&nbsp;&nbsp;&nbsp;表示apache+php+mysql<br>
+      2 nginx &nbsp;&nbsp;&nbsp;&nbsp;表示nginx+php+mysql<br>
+      3 nginx+apache 表示nginx+apache+php+mysql的组合</td>
+  </tr>
+</table>
+<br><table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="2" bgcolor="#F2F4F6"><hr></td>
+  </tr></table>
+<form id="form3" name="form3" method="post" action="">
+<table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="2" bgcolor="#F2F4F6"><strong>web日志处理</strong></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">日志目录</td>
+    <td align="left" class="a_fen"><label>
+        <input name="web_logs_home" type="text" id="web_logs_home" value="<?=$web_logs_home;?>" />
+    </label></td>
+  </tr>  
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td width="11%"   align="center" class="a_fen">切割日志</td>
+    <td width="89%" align="left" class="a_fen"><label>
+    <input name="web_logs_logrotate" type="checkbox" id="web_logs_logrotate" value="1" <? if ($web_logs_logrotate==1) echo 'checked';?>>
+    每天生成一个文件</label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">是否压缩</td>
+    <td align="left" class="a_fen"><label>
+    <input name="web_logs_gz" type="checkbox" id="web_logs_gz" value="1" <? if ($web_logs_gz==1) echo 'checked';?>>
+    打包压缩成gz文件
+    </label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">保留几份</td>
+    <td align="left" class="a_fen"><label>
+    <input name="web_logs_day" type="text" id="web_logs_day" size="8" value="<?=$web_logs_day;?>">
+    保留最近几天的文件，默认是一周（7天）
+    </label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">站点目录</td>
+    <td align="left" class="a_fen"><label>
+    <input name="site_logs_is" type="checkbox" id="site_logs_is" value="1" <? if ($site_logs_is==1) echo 'checked';?>>
+    是否保存到站点根目录下的logs/目录里,启用后会保存到各自站点根目录下的logs目录</label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen"></td>
+    <td align="left" class="a_fen"><label>
+        <input name="Submit3" class="button" type="submit" id="Submita" value="确定" />
+      </label>&nbsp;&nbsp;&nbsp;<?=$web_logs_is_title;?>&nbsp;&nbsp; <a href="http://www.wdlinux.cn/bbs/thread-3018-1-1.html" target="_blank">什么是默认的web访问日志?</a> </td>
+  </tr>
+</table>
+</form>
+<br><table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="2" bgcolor="#F2F4F6"><hr></td>
+  </tr></table>
+<form id="form2" name="form2" method="post" action="">
+<table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="2" bgcolor="#F2F4F6"><strong>修改后台端口</strong> (默认为8080)</td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td width="11%"   align="center" class="a_fen">当前使用端口</td>
+    <td width="89%" align="left" class="a_fen"><label><?=$admin_port;?>
+        <input type="hidden" name="o_port" value="<?=$admin_port;?>">
+    </label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">修改端口</td>
+    <td align="left" class="a_fen"><label>
+        <input name="admin_port" type="text" id="admin_port" />
+    </label> 
+    <span class="STYLE1">不能使用80端口,建议端口范围(8000-65535之间) </span></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen"></td>
+    <td align="left" class="a_fen"><label>
+        <input name="Submita" class="button" type="submit" id="Submita" value="确定" />
+      </label></td>
+  </tr>
+</table>
+</form>
+<table width="96%" border="0" cellspacing="1" cellpadding="1" align="center" class="tbtitle" style="background:#FEDF63;">
+  <tr  bgcolor="#FFFFE6">
+    <td><span class="STYLE1">备注</span><br>
+      1 点击确定后，会显示“无法显示该网页”，请使用新修改的端口打开即可<br>
+      2 不能使用80端口，建议修改为1024以后的数据为端口 </td>
+  </tr>
+</table>
+<br>
+<br><table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="2" bgcolor="#F2F4F6"><hr></td>
+  </tr></table>
+<form id="form4" name="form4" method="post" action="">
+<table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="2" bgcolor="#F2F4F6"><strong>修改FTP端口</strong> (默认为21)</td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td width="11%"   align="center" class="a_fen">当前使用端口</td>
+    <td width="89%" align="left" class="a_fen"><label><?=$f_port;?>
+        <input type="hidden" name="fo_port" value="<?=$f_port;?>">
+    </label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">修改端口</td>
+    <td align="left" class="a_fen"><label>
+        <input name="f_port" type="text" id="f_port" />
+    </label></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen"></td>
+    <td align="left" class="a_fen"><label>
+        <input name="Submit4" class="button" type="submit" id="Submit4" value="确定" />
+      </label></td>
+  </tr>
+</table>
+</form>
+<br>

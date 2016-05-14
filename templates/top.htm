@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>欢迎使用wdcp linux服务器/虚拟主机管理系统</title>
+<link href="templates/Style/css_top.css" rel="stylesheet" type="text/css" />
+<style>
+span { margin:0; padding:0};
+</style>
+</head>
+<body>
+
+<div style="height:60px;">
+<div style="float:left; padding-left:15px">
+<a target="_blank" href="http://www.wdlinux.cn/" title="欢迎使用wdcp linux服务器">
+<img border="0" src="/templates/images/admin_tlogo.jpg" />
+</a>
+</div>
+</div>
+
+<div style="clear:both"></div>
+
+<div style="height:30px; line-height:30px; width:auto;">
+	<div style="float:left; margin-left:5px; line-height:30px;">
+		>>>  <?=$wdcp_user;?>  欢迎使用wdcp linux服务器/虚拟主机管理系统
+	</div>
+	<div style="float:right; margin-right:5px;line-height:30px"><a href="login.php?act=logout" target="_parent">注销登录</a></div>
+
+</div>
+
+<script>
+function showMenu(itm)
+{
+	for(var index=1;index<=4;index++)
+	{
+		if(itm==index)
+		{
+			parent.document.frames["menu"].document.getElementById("items"+index).style.display="block";
+		}
+		else
+		{
+			parent.document.frames["menu"].document.getElementById("items"+index).style.display="none";
+		}
+	}
+}
+</script>
+<script>
+var nMS =1200000;
+function GetRTime(){
+//var EndTime= new Date(2006,5,10,0,0); //截止时间:2006年6月10日0时0分
+//var NowTime = new Date();
+//var nMS =EndTime.getTime() - NowTime.getTime();
+nMS-=1000;
+var nD =Math.floor(nMS/(1000 * 60 * 60 * 24));
+var nH=Math.floor(nMS/(1000*60*60)) % 24;
+var nM=Math.floor(nMS/(1000*60)) % 60;
+var nS=Math.floor(nMS/1000) % 60;
+if(nH>= 0){
+// document.getElementById("RemainD").innerHTML=nD;
+ //document.getElementById("RemainH").innerHTML=nH;
+ document.getElementById("RemainM").innerHTML=nM;
+ document.getElementById("RemainS").innerHTML=nS;
+ setTimeout("GetRTime()",1000);
+}
+else {
+ document.getElementById("CountMsg").innerHTML="您已经退出后台系统！";
+}
+
+}
+
+//window.onload=GetRTime;
+
+//window.setInterval("refreshSession()",600000);
+</script>
+</body>
+</html>

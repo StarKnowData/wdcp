@@ -1,0 +1,124 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>网卡流量</title>
+</head>
+<link href="/templates/Style/css_body.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="/templates/JSFile/fun_normal.js"></script>
+<script language="javascript" src="/templates/JSFile/jquery.min.js"></script>
+<script type="text/javascript" src="/js/fun.js"></script>
+<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
+<script type="text/javascript"> 
+<!--
+$(document).ready(function(){getJSONData();});
+function getJSONData()
+{
+	setTimeout("getJSONData()", 1000);
+	$.getJSON('?act=rt&callback=?', displayData);
+}
+function displayData(dataJSON)
+{
+	$("#ts0").html(dataJSON.ts0);
+	$("#trs0").html(dataJSON.trs0);
+	$("#tp0").html(dataJSON.tp0);
+	$("#ter0").html(dataJSON.ter0);
+	$("#rs0").html(dataJSON.rs0);
+	$("#rrs0").html(dataJSON.rrs0);
+	$("#rp0").html(dataJSON.rp0);
+	$("#rer0").html(dataJSON.rer0);
+	$("#ts1").html(dataJSON.ts1);
+	$("#trs1").html(dataJSON.trs1);
+	$("#tp1").html(dataJSON.tp1);
+	$("#ter1").html(dataJSON.ter1);
+	$("#rs1").html(dataJSON.rs1);
+	$("#rrs1").html(dataJSON.rrs1);
+	$("#rp1").html(dataJSON.rp1);
+	$("#rer1").html(dataJSON.rer1);
+	$("#ts2").html(dataJSON.ts2);
+	$("#trs2").html(dataJSON.trs2);
+	$("#tp2").html(dataJSON.tp2);
+	$("#ter2").html(dataJSON.ter2);
+	$("#rs2").html(dataJSON.rs2);
+	$("#rrs2").html(dataJSON.rrs2);
+	$("#rp2").html(dataJSON.rp2);
+	$("#rer2").html(dataJSON.rer2);
+	$("#ts3").html(dataJSON.ts3);
+	$("#trs3").html(dataJSON.trs3);
+	$("#tp3").html(dataJSON.tp3);
+	$("#ter3").html(dataJSON.ter3);
+	$("#rs3").html(dataJSON.rs3);
+	$("#rrs3").html(dataJSON.rrs3);
+	$("#rp3").html(dataJSON.rp3);
+	$("#rer3").html(dataJSON.rer3);
+	$("#ts4").html(dataJSON.ts4);
+	$("#trs4").html(dataJSON.trs4);
+	$("#tp4").html(dataJSON.tp4);
+	$("#ter4").html(dataJSON.ter4);
+	$("#rs4").html(dataJSON.rs4);
+	$("#rrs4").html(dataJSON.rrs4);
+	$("#rp4").html(dataJSON.rp4);
+	$("#rer4").html(dataJSON.rer4);
+	$("#ts5").html(dataJSON.ts5);
+	$("#trs5").html(dataJSON.trs5);
+	$("#tp5").html(dataJSON.tp5);
+	$("#ter5").html(dataJSON.ter5);
+	$("#rs5").html(dataJSON.rs5);
+	$("#rrs5").html(dataJSON.rrs5);
+	$("#rp5").html(dataJSON.rp5);
+	$("#rer5").html(dataJSON.rer5);
+
+}
+-->
+</script>
+<body>
+<a name="top" id="top"></a><table width="96%" border="0" cellspacing="0" cellpadding="0" align="center"  >
+<tr >
+    <td  >
+<div class="bodytitle">
+	<div class="bodytitleleft"></div>
+	<div class="bodytitletxt">网卡流量</div>
+</div>
+</td></tr></table>
+<br />
+
+<table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="6" bgcolor="#F2F4F6"><strong>网卡流量</strong></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">网卡名</td>
+    <td   align="center" class="a_fen">流向</td>
+    <td   align="center" class="a_fen">总流量</td>
+    <td   align="center" class="a_fen">实时流量</td>
+    <td   align="center" class="a_fen">数据包</td>
+    <td   align="center" class="a_fen">错误包</td>
+  </tr>
+  <?
+  for ($i=0;$i<sizeof($list);$i++) {
+  ?>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td rowspan="2"   align="center" class="a_fen">&nbsp;<?=$list[$i][0];?></td>
+    <td   align="center" class="a_fen">发送</td>
+    <td   align="center" class="a_fen"><span id="ts<?php echo $i?>">0</span></td>
+    <td   align="center" class="a_fen"><span id="trs<?php echo $i?>">0</span></td>
+    <td   align="center" class="a_fen"><span id="tp<?php echo $i?>">0</span></td>
+    <td   align="center" class="a_fen"><span id="ter<?php echo $i?>">0</span></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="center" class="a_fen">接收</td>
+    <td   align="center" class="a_fen"><span id="rs<?php echo $i?>">0</span></td>
+    <td   align="center" class="a_fen"><span id="rrs<?php echo $i?>">0</span></td>
+    <td   align="center" class="a_fen"><span id="rp<?php echo $i?>">0</span></td>
+    <td   align="center" class="a_fen"><span id="rer<?php echo $i?>">0</span></td>
+  </tr><? } ?>
+</table>
+<br>
+<table width="96%" border="0" cellspacing="1" cellpadding="1" align="center" class="tbtitle" style="background:#FEDF63;">
+  <tr  bgcolor="#FFFFE6">
+    <td><span class="STYLE1">备注</span>:<br />
+      1 lo表示本地环路<br>
+      2 OpenVZ虚拟机/VPS上的实时流量可能会有误</td>
+  </tr>
+</table>
+
+<br>

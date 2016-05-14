@@ -1,0 +1,151 @@
+*{
+
+	padding:0px;
+
+	margin:0px;
+
+}
+
+body{
+
+	color:#004499;
+
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+
+	font-size:12px;
+
+	height:100%;
+
+	overflow-y:auto;
+
+	background-color:#A1D8FF;
+
+	/*
+
+	SCROLLBAR-FACE-COLOR:#FF9900; 
+
+	SCROLLBAR-HIGHLIGHT-COLOR: #FF9900; 
+
+	SCROLLBAR-SHADOW-COLOR: #FFFF99;
+
+	SCROLLBAR-3DLIGHT-COLOR: #FFCC00; 
+
+	SCROLLBAR-ARROW-COLOR: #FFFFCC; 
+
+	SCROLLBAR-TRACK-COLOR: #FFFF99; 
+
+	SCROLLBAR-DARKSHADOW-COLOR: #FFFF99; 
+
+	*/
+
+	
+
+}
+
+/*---- link --------------*/
+
+a{
+
+	color:#004499;
+
+}
+
+a:hover{
+
+	text-decoration:none;
+
+}
+
+/*---- menu style --------------*/
+
+.menu{
+
+	width:152px;
+
+	margin-left:auto;
+
+	margin-right:auto;
+
+}
+
+.menu dl{
+
+	margin-top:2px;
+
+}
+
+.menu dl dt{
+
+	background:url(../images/menu_title_bg.jpg) top left repeat-x; margin-top:1px;
+
+}
+
+.menu dl dt a{
+
+	height:22px;
+
+	padding-top:6px;
+
+	line-height:19px;
+
+	width:150px;
+
+	display:block;
+
+	color:#ffffff;
+
+	font-weight:bold;
+
+	text-decoration:none;
+
+	background: url(../images/ico_1.gif) 10px 7px no-repeat;
+
+	text-indent:30px;
+
+	letter-spacing:2px;
+
+}
+
+.menu dl dt a:hover{
+
+	
+
+}
+
+.menu dl dd ul{
+
+	list-style:none;
+
+}
+
+.menu dl dd ul li a{
+
+	height:23px;
+
+	widows:152px;
+
+	display:block;
+
+	line-height:23px;
+
+	text-indent:23px;
+
+	background:#EDF5FE url(../images/ico_2.gif) no-repeat 13px 10px;
+
+	border-color:#FFF #E2EFFE #E2EFFE #FFF;
+
+	border-style:solid;
+
+	border-width:1px;
+
+}
+
+.menu dl dd ul li a:hover{
+
+	background:#FFF url(../images/ico_3.gif) no-repeat 13px 10px;
+
+	font-weight:bold;
+
+	color: #FF6600;
+
+}

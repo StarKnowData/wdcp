@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>修改wdcp后台数据库用户密码</title>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF0000}
+-->
+</style>
+</head>
+<body>
+<link href="/templates/Style/css_body.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="/templates/JSFile/fun_normal.js"></script>
+<script language="javascript" src="/templates/JSFile/jquery.min.js"></script>
+<script type="text/javascript" src="/js/fun.js"></script>
+<a name="top" id="top"></a><table width="96%" border="0" cellspacing="0" cellpadding="0" align="center"  >
+<tr >
+    <td  >
+<div class="bodytitle">
+	<div class="bodytitleleft"></div>
+	<div class="bodytitletxt">修改wdcp后台数据库用户密码</div>
+</div>
+</td></tr></table>
+<br />
+
+<table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="2" bgcolor="#F2F4F6"><strong>修改wdcp后台数据库用户密码</strong></td>
+  </tr>
+<form id="form_chg_mysql_wdcp_passwd" name="form_chg_mysql_wdcp_passwd" method="post" action="">
+      
+    <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+      <td width="149" align="center" class="a_fen">原密码:</td>
+      <td width="813" align="left"   class="a_fen"><label>
+        <input name="opass" type="password" id="opass" />
+      </label></td>
+    </tr>
+    <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+      <td align="center" class="a_fen">新密码:</td>
+      <td align="left"   class="a_fen"><label>
+        <input name="npass" type="password" id="npass" />
+      6至20个字母,数字,下划线组成</label></td>
+    </tr>
+    <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+      <td align="center" class="a_fen">确认密码:</td>
+      <td align="left"   class="a_fen"><label>
+        <input name="cpass" type="password" id="cpass" />
+      6至20个字母,数字,下划线组成</label></td>
+    </tr>
+    <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+      <td>&nbsp;</td>
+      <td align="left"   class="a_fen"><label>
+        <input name="Submit_chg_mysql_wdcp" type="submit"  class="button" id="Submit_chg_mysql_wdcp" value="确定" />
+      </label></td>
+    </tr>
+</form>
+</table>
+<br>
+<table width="96%" border="0" cellspacing="1" cellpadding="1" align="center" class="tbtitle" style="background:#FEDF63;">
+  <tr  bgcolor="#FFFFE6">
+    <td><span class="STYLE1">备注</span>:<br>
+      1 这里的密码是指wdcp后台所用数据库用户的密码,一般不用修改 <br>
+   </td>
+  </tr>
+</table>

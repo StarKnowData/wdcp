@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>menu</title>
+
+<link href="templates/Style/css_menu.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+</head>
+
+<script language="javascript">
+
+function getObject(objectId) {
+ if(document.getElementById && document.getElementById(objectId)) {
+ // W3C DOM
+ return document.getElementById(objectId);
+ }
+ else if (document.all && document.all(objectId)) {
+ // MSIE 4 DOM
+ return document.all(objectId);
+ }
+ else if (document.layers && document.layers[objectId]) {
+ // NN 4 DOM.. note: this won't find nested layers
+ return document.layers[objectId];
+ }
+ else {
+ return false;
+ }
+}
+
+function showHide(objname){
+    var obj = getObject(objname);
+    if(obj.style.display == "none"){
+		obj.style.display = "block";
+		
+	}else{
+		obj.style.display = "none";
+	}
+}
+</script>
+<base target="main">
+<body>
+<div class="menu">
+<dl>
+    <dt><a href="###" onclick="showHide('items1');" target="_self">系统设置</a></dt>
+    <dd id="items1" style="display:block;">
+			<ul>
+<li><a href='default.php' target='mainFrame'>后台首页</a></li>
+<li><a href='admin/sys_conf.php' target='mainFrame'>系统设置</a></li>
+<li><a href='admin/loginlog.php' target='mainFrame'>登录日志</a></li>
+<li><a href='admin/optlog.php' target='mainFrame'>操作日志</a></li>
+<li><a href='admin/task.php' target='mainFrame'>计划任务</a></li>
+<li><a href='admin/mail.php' target='mainFrame'>邮件设置</a></li>
+<li><a href='admin/memcached.php' target='mainFrame'>memcached设置</a></li>
+          </ul>
+		</dd>
+</dl>
+<?=module_import($module_list);?>
+
+<?=member_menu();?>
+
+<dl>
+    <dt><a href="###" onclick="showHide('items6');" target="_self">系统管理</a></dt>
+    <dd id="items6" style="display:none;">
+			<ul>
+<li><a href='sys/top.php' target='mainFrame'>资源使用率</a></li>
+<li><a href='sys/netstat.php' target='mainFrame'>连接数管理</a></li>
+<li><a href='sys/service.php' target='mainFrame'>启动服务</a></li>
+<li><a href='sys/port.php' target='mainFrame'>端口管理</a></li>
+<li><a href='sys/process.php' target='mainFrame'>进程管理</a></li>
+<li><a href='sys/ifconfig.php' target='mainFrame'>IP设置</a></li>
+<li><a href='sys/mem.php' target='mainFrame'>内存管理</a></li>
+<li><a href='sys/resolv.php' target='mainFrame'>设置DNS</a></li>
+<li><a href='sys/cmd.php' target='mainFrame'>运行命令</a></li>
+<li><a href='sys/disk.php' target='mainFrame'>磁盘使用率</a></li>
+<li><a href='sys/filem.php' target='mainFrame'>文件管理</a></li>
+<li><a href='sys/syslog.php' target='mainFrame'>系统日志</a></li>
+<li><a href='sys/server.php' target='mainFrame'>服务重启</a></li>
+<li><a href='sys/time.php' target='mainFrame'>时间设置</a></li>
+<li><a href='sys/traffic.php' target='mainFrame'>网卡流量</a></li>
+          </ul>
+		</dd>
+</dl>
+<dl>
+    <dt><a href="###" onclick="showHide('items7');" target="_self">安全管理</a></dt>
+    <dd id="items7" style="display:none;">
+			<ul>
+<li><a href='safe/iptables.php' target='mainFrame'>防火墙(iptables)</a></li>
+<li><a href='safe/selinux.php' target='mainFrame'>Selinux设置</a></li>
+<li><a href='safe/ssh.php' target='mainFrame'>ssh管理</a></li>
+<li><a href='safe/ping.php' target='mainFrame'>禁ping</a></li>
+          </ul>
+		</dd>
+</dl>
+
+<dl>
+    <dt><a href="###" onclick="showHide('items8');" target="_self">使用说明</a></dt>
+    <dd id="items8" style="display:none;">
+			<ul>
+<li><a href='templates/help/guide.html' target='mainFrame'>说明</a></li>
+<li><a href='templates/help/faq.html' target='mainFrame'>问题集(FAQ)</a></li>
+          </ul>
+		</dd>
+</dl>
+
+
+
+</div>
+</body>
+</html>

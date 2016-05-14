@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>系统资源查看</title>
+</head>
+<script language="javascript" src="/templates/JSFile/fun_normal.js"></script>
+<script language="javascript" src="/templates/JSFile/jquery.min.js"></script>
+<script type="text/javascript" src="/js/fun.js"></script>
+<body>
+<link href="/templates/Style/css_body.css" rel="stylesheet" type="text/css" />
+<a name="top" id="top"></a><table width="96%" border="0" cellspacing="0" cellpadding="0" align="center"  >
+<tr >
+    <td  >
+<div class="bodytitle">
+	<div class="bodytitleleft"></div>
+	<div class="bodytitletxt">系统资源状态</div>
+</div>
+</td></tr></table>
+<br />
+
+<table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td bgcolor="#F2F4F6"><strong>系统资源状态</strong>&nbsp;(<a href="<?=$PHP_SELF;?>?act=top">top</a>监控)&nbsp;
+        <input name="reload" type="button" id="reload" class="button" onclick=location.reload() value="刷新" /></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="left" class="a_fen"><pre><?=$msg;?></pre></td>
+  </tr>
+</table>
+
+<br>

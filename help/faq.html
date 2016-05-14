@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>问题集(FAQ)</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 14px;
+}
+body {
+	margin-left: 60px;
+	margin-top: 30px;
+}
+-->
+</style></head>
+
+<body>
+<table width="800" border="1" cellpadding="0" cellspacing="0" bordercolor="#F7F7F7">
+  <tr>
+    <td height="45"><div align="center">问题集(FAQ)</div></td>
+  </tr>
+  <tr>
+    <td height="28"><p>Q1:文件或目录权限<br />
+        <br />
+    Linux的文件和目录权限主要有三组,即文件或目录的所有者,所有组,其它.且每一组由三个字母表示,也可以是数字.<br />
+    字母是rwx,数据是421,且是相对应的,如r-4,w-2,x-1,加起来就是7,如777,就代表了所有者,组,其它都拥有读写执行的权限.如<br />
+    [root@wdlinux ~]# ls -l<br />
+    drwxr-xr-x  7 root root       4096 Jan 14 19:18 lanmp<br />
+    -rw-r--r--  1 root root      10723 Jan 14 14:21 lanmp.sh<br />
+    -rw-r--r--  1 root root   59332181 Sep 29 12:02 lanmp.tar.gz<br />
+    看&quot;-rw-r--r--&quot;,总共有10个字符,除去第一个表示文件的类型外,后面9个即对应了上面所说的三组权限了.<br />
+    第一个字符一般用来区分文件和目录：<br />
+    d：表示是一个目录，事实上在ext2fs中，目录是一个特殊的文件。<br />
+    －：表示这是一个普通的文件。<br />
+    l:   表示这是一个符号链接文件，实际上它指向另一个文件。<br />
+    b、c：分别表示区块设备和其他的外围设备，是特殊类型的文件。<br />
+    s、p：这些文件关系到系统的数据结构和管道，通常很少见到。</p>
+      <p>Q2:phpmyadmin 提示 链接表的附加功能尚未激活。要查出原因，请点击此处。<br />
+      请看 <a href="http://www.wdlinux.cn/node/177" target="_blank">http://www.wdlinux.cn/node/177</a></p>
+      <p>&nbsp;</p>
+      <p>更多问题FAQ整理中...,如你遇到问题或有问题,请发表至 http://www.wdlinux.cn<br />
+        </p></td>
+  </tr>
+</table>
+</body>
+</html>

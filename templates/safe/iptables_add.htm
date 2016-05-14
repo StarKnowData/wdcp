@@ -1,0 +1,72 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>iptables防火墙增加</title>
+</head>
+<body>
+<link href="/templates/Style/css_body.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="/templates/JSFile/fun_normal.js"></script>
+<script language="javascript" src="/templates/JSFile/jquery.min.js"></script>
+<script type="text/javascript" src="/js/fun.js"></script>
+<a name="top" id="top"></a><table width="96%" border="0" cellspacing="0" cellpadding="0" align="center"  >
+<tr >
+    <td  >
+<div class="bodytitle">
+	<div class="bodytitleleft"></div>
+	<div class="bodytitletxt">防火墙iptables配置</div>
+</div>
+</td></tr></table>
+<br />
+<form id="form1" name="form1" method="post" action="">
+<table border="0" width="96%" align="center" cellpadding="1" cellspacing="1" class="tbtitle">
+  <tr>
+    <td colspan="7" bgcolor="#F2F4F6"><strong>防火墙iptables配置</strong></td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFE9" >
+    <td  align="left" >协议</td>
+    <td  align="left" >源IP</td>
+    <td  align="left" >源端口</td>
+    <td  align="left" >目标IP</td>
+    <td  align="left" >目标端口</td>
+    <td  align="left" >操作</td>
+    <td align="left"   > </td>
+  </tr>
+  <tr align="center"  bgcolor="#FFFFFF" onMouseMove="tr_onMouseOver(this)" onMouseOut="tr_onMouseOut(this)">
+    <td   align="left" class="a_fen"><select name="pro" id="pro">
+          <option value="tcp">tcp</option>
+          <option value="udp">udp</option>
+        </select></td>
+    <td   align="left" class="a_fen"><input name="sip" type="text" id="sip" size="25" /></td>
+    <td   align="left" class="a_fen"><input name="sport" type="text" id="sport" size="8" /></td>
+    <td   align="left" class="a_fen"><input name="dip" type="text" id="dip" size="25" /></td>
+    <td   align="left" class="a_fen"><input name="dport" type="text" id="dport" size="8" /></td>
+    <td   align="left" class="a_fen"><select name="act">
+          <option value="ACCEPT">通过</option>
+          <option value="DROP">拒绝</option>
+    </select></td>
+    <td align="left"   class="a_fen"><input name="Submit_add" type="submit" id="Submit_add" class="button" value="确定" /></td>
+  </tr>
+</table></form><br>
+
+<table width="96%" border="0" cellspacing="1" cellpadding="1" align="center" class="tbtitle" style="background:#FEDF63;">
+  <tr  bgcolor="#FFFFE6">
+    <td>备注:<br />
+        1 
+        空为默认,则不限.<br />
+        2 
+        源IP,源端口一般是指远程IP和端口,目标IP和端口,一般是指本机(服务器)的IP和端口.<br />
+      3  IP地址支持IP段,如192.168.1.0/24,192.168.1.0/16<br />
+      4 更改过规则后,如需下次重启生效,请保存.否则重起后无效<br />
+      <br />
+      例子说明:<br />
+      1 比如开通80端口,在目标端口上填80即可,确定<br />
+      2 限制FTP只有192.168.1.200这个IP可访问. <br />
+       在源IP上填192.168.1.200,目标端口上填21,确定即可<br />
+      3 如果限制192.168.1.200 IP的访问<br />
+      在源IP上填192.168.1.200,&quot;操作&quot;选拒绝,确定即可<br />
+      4 如限制只有192.168.1.200这个IP可以访问3306端口<br />
+    在源IP上填 192.168.1.200,目标端口上填3306,确定即可</td>
+  </tr>
+</table>
+
+<br>
